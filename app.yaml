@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8sdemo
+  labels:
+    app: k8sdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8sdemo
+  template:
+    metadata:
+      labels:
+        app: k8sdemo
+    spec:
+      containers:
+      - name: k8sdemo
+        image: craftslab/k8sdemo
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "1000m"
+            memory: "1Gi"
+          limits:
+            cpu: "2000m"
+            memory: "2Gi"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8sdemo-svc
+spec:
+  selector:
+    app: k8sdemo
+  type: NodePort
+  ports:
+  - name: web
+    port: 8080
+    protocol: TCP
