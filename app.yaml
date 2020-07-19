@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: k8sdemo
-        image: craftslab/k8sdemo
+        image: craftslab/k8sdemo:latest
         ports:
         - containerPort: 80
         resources:
@@ -38,5 +38,5 @@ spec:
   type: NodePort
   ports:
   - name: web
-    port: 8080
+    port: 80
     protocol: TCP
