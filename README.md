@@ -28,4 +28,7 @@ docker run -p 8080:80 --rm craftslab/k8sdemo:latest
 
 # Run on K8s
 kubectl apply -f app.yaml
+
+# Stop on K8s
+kubectl delete -f app.yaml
 ```
