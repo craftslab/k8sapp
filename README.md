@@ -4,7 +4,7 @@ K8s application demo
 
 
 
-### Build
+## Build
 
 ```bash
 docker build -t k8sdemo:latest .
@@ -12,7 +12,7 @@ docker build -t k8sdemo:latest .
 
 
 
-### Deploy
+## Deploy
 
 ```bash
 docker pull craftslab/k8sdemo:latest
@@ -20,7 +20,7 @@ docker pull craftslab/k8sdemo:latest
 
 
 
-### Run
+## Run
 
 ```bash
 # Run on Docker
@@ -32,3 +32,13 @@ kubectl apply -f app.yaml
 # Stop on K8s
 kubectl delete -f app.yaml
 ```
+
+
+
+## Reference
+
+https://docs.traefik.io/user-guides/crd-acme/#ingressroute-definition
+
+https://docs.traefik.io/user-guides/crd-acme/#services
+
+https://docs.traefik.io/user-guides/crd-acme/#deployments
