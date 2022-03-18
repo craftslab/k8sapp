@@ -32,3 +32,4 @@ kubectl delete -f app.yaml
 - [traefik-deployments](https://docs.traefik.io/user-guides/crd-acme/#deployments)
 - [traefik-ingressroute-definition](https://docs.traefik.io/user-guides/crd-acme/#ingressroute-definition)
 - [traefik-services](https://docs.traefik.io/user-guides/crd-acme/#services)
+- [traefik-steps](https://blog.csdn.net/baidjay/article/details/121415009)
