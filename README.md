@@ -28,6 +28,7 @@ kubectl delete -f app.yaml
 
 ## Reference
 
+- [kind-deploy](https://gist.github.com/craftslab/d53fe048813b5bd05f24118959e9c246)
 - [sealyun-k8s](https://gist.github.com/craftslab/aee84200b8bcc72be29a725eeb33402b)
 - [traefik-deployments](https://docs.traefik.io/user-guides/crd-acme/#deployments)
 - [traefik-ingressroute-definition](https://docs.traefik.io/user-guides/crd-acme/#ingressroute-definition)
