@@ -1,14 +1,14 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: k8sdemo-svc-ingress-route
+  name: k8sapp-svc-ingress-route
   namespace: default
 spec:
   entryPoints:
   - web
   routes:
-  - match: Host(`k8sdemo.io`)
+  - match: Host(`k8sapp.io`)
     kind: Rule
     services:
-    - name: k8sdemo-svc
+    - name: k8sapp-svc
       port: 80

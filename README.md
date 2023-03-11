@@ -1,4 +1,4 @@
-# k8sdemo
+# k8sapp
 
 K8s application demo
 
@@ -7,8 +7,8 @@ K8s application demo
 ## Build
 
 ```bash
-docker build -t craftslab/k8sdemo:latest .
-docker push craftslab/k8sdemo:latest
+docker build -t craftslab/k8sapp:latest .
+docker push craftslab/k8sapp:latest
 ```
 
 
@@ -17,7 +17,7 @@ docker push craftslab/k8sdemo:latest
 
 ```bash
 # Run on Docker
-docker run -p 8080:80 --rm craftslab/k8sdemo:latest
+docker run -p 8080:80 --rm craftslab/k8sapp:latest
 
 # Run on K8s
 kubectl apply -f app.yaml

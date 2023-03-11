@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8sdemo
+  name: k8sapp
   labels:
-    app: k8sdemo
+    app: k8sapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8sdemo
+      app: k8sapp
   template:
     metadata:
       labels:
-        app: k8sdemo
+        app: k8sapp
     spec:
       containers:
-      - name: k8sdemo
-        image: craftslab/k8sdemo:latest
+      - name: k8sapp
+        image: craftslab/k8sapp:latest
         ports:
         - containerPort: 80
         resources:
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: k8sdemo-svc
+  name: k8sapp-svc
 spec:
   selector:
-    app: k8sdemo
+    app: k8sapp
   ports:
   - name: web
     port: 80
